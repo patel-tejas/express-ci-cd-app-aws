@@ -4,7 +4,7 @@ const app = express();
 const PORT = 8080;
 
 app.get('/', (req, res) => {
-    res.send('Github Actions Executed Successfully!');
+    res.send('Rishi Patel');
 });
 
 app.listen(PORT, () => {
