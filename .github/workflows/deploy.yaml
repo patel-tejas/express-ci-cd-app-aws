@@ -20,9 +20,8 @@ jobs:
           username: ec2-user
           key: ${{ secrets.SSH_KEY }}
           script: |
-            docker pull my-node-app:latest
-            docker stop my-node-app || true
-            docker rm my-node-app || true
-            docker run -d --name my-node-app -p 8080:8080 my-node-app:latest
+            cd /home/ec2-user/express-ci-cd-app-aws
+            git pull
+            docker compose up -d --build
 
  
